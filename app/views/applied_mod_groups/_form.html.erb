@@ -1,0 +1,25 @@
+<%= form_for(@applied_mod_group) do |f| %>
+  <% if @applied_mod_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@applied_mod_group.errors.count, "error") %> prohibited this applied_mod_group from being saved:</h2>
+
+      <ul>
+      <% @applied_mod_group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :modifier_group_id %><br>
+    <%= f.text_field :modifier_group_id %>
+  </div>
+  <div class="field">
+    <%= f.label :item_id %><br>
+    <%= f.text_field :item_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
