@@ -1,3 +1,16 @@
+## Rails Pizza App
+There remains much to be done.
+
+My self-designated task for this week was to create a new rails project and create these actual entities as models. I decided to build it off of one of the devise examples. Actually, I have two version of the rails project, as I am not yet fully decided which way I am going to take the login. One of the example projects is a social media login integrated implementation of devise, and it looks like it could hold potential for facile logins. There is a slight annoyance, and that is that it apparently is using the inherited_resources gem.
+
+The other versions of this app that I'm working on concurrently are at exactly the same stage as this app. Essentially, I've planned out all my entities and attributes, created scaffolds according to my design and have already started working on figuring out exactly how each model relates to other models. The difficultly is, for the admin account, setting everything up where modifiers can be created and added to modifier groups, which will be added to items. This allows the admin to set up different possible configurations. Then, the user account selects an item (it becomes a cart_item inside the order) and picks some of these modifiers to apply to the item. I'm working on the logic where one modifier (e.x., extra cheese) can be applied to multiple mod-groups. Just as I'm typing this, I realized that I wouldn't need this difficulty if I had the 'extras' boolean on, instead of the modifier, the modifier group. It is very likely that will be a change in the near future.
+
+The GitHub repository is located at:
+http://github.com/jageiger/pizza
+
+
+Note: The following is the original readme of mohitjain's social-login-in-rails example, with the expletives omitted.
+
 # Devise + Facebook Login + Google Login + Twitter Login + Linkedin Login + Github Login
 Basic application with all the popular Social login System.
 
@@ -46,12 +59,12 @@ I am using devise in this application. Few things to note in this:
 
 ## License
 
-DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+DO WHAT THE [EXPLETIVE] YOU WANT TO PUBLIC LICENSE
 
 Everyone is permitted to copy and distribute verbatim or modified
 copies of this license document, and changing it is allowed as long
 as the name is changed.
 
-DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+DO WHAT THE [EXPLETIVE] YOU WANT TO PUBLIC LICENSE TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
-You just DO WHAT THE FUCK YOU WANT TO.
+You just DO WHAT THE [EXPLETIVE] YOU WANT TO.
