@@ -14,11 +14,15 @@ class GroupedModifiersController < ApplicationController
 
   # GET /grouped_modifiers/new
   def new
+    @modifier_groups = ModifierGroup.all
+    @modifiers = Modifier.all
     @grouped_modifier = GroupedModifier.new
   end
 
   # GET /grouped_modifiers/1/edit
   def edit
+    @modifier_groups = ModifierGroup.all
+    @modifiers = Modifier.all
   end
 
   # POST /grouped_modifiers

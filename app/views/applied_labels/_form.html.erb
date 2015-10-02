@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :item_id %><br>
-    <%= f.text_field :item_id %>
+    <%= f.select :item_id, options_from_collection_for_select(@items, "id", "name", @applied_label.item_id), {}, class: "form-control", :prompt => "Select item" %>
   </div>
   <div class="field">
     <%= f.label :label_id %><br>
-    <%= f.text_field :label_id %>
+    <%= f.select :label_id, options_from_collection_for_select(@labels, "id", "name", @applied_label.label_id), {}, class: "form-control", :prompt => "Select label" %>
   </div>
   <div class="field">
     <%= f.label :daily_special %><br>
@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :day %><br>
-    <%= f.text_field :day %>
+    <%= f.select :day, options_for_select([["None","0"],["Sunday", "1"], ["Monday", "2"], ["Tuesday","3"],["Wednesday","4"],["Thursday","5"],["Friday","6"],["Saturday","7"]],@applied_label.day), {}, {:class => "form-control"} %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -14,11 +14,18 @@ class CategorizationsController < ApplicationController
 
   # GET /categorizations/new
   def new
+   
+    # need a before filter for this and all joins, take the admin to the appropriate model when there are no records
+    
+    @categories = Category.all
+    @items = Item.all
     @categorization = Categorization.new
   end
 
   # GET /categorizations/1/edit
   def edit
+    @categories = Category.all
+    @items = Item.all
   end
 
   # POST /categorizations

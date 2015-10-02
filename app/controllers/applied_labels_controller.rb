@@ -14,11 +14,15 @@ class AppliedLabelsController < ApplicationController
 
   # GET /applied_labels/new
   def new
+    @items = Item.all
+    @labels = Label.all
     @applied_label = AppliedLabel.new
   end
 
   # GET /applied_labels/1/edit
   def edit
+    @items = Item.all
+    @labels = Label.all
   end
 
   # POST /applied_labels

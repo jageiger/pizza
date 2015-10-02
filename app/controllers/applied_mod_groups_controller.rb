@@ -14,11 +14,15 @@ class AppliedModGroupsController < ApplicationController
 
   # GET /applied_mod_groups/new
   def new
+    @modifier_groups = ModifierGroup.all
+    @items = Item.all
     @applied_mod_group = AppliedModGroup.new
   end
 
   # GET /applied_mod_groups/1/edit
   def edit
+    @modifier_groups = ModifierGroup.all
+    @items = Item.all
   end
 
   # POST /applied_mod_groups

@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :modifier_group_id %><br>
-    <%= f.text_field :modifier_group_id %>
+    <%= f.select :modifier_group_id, options_from_collection_for_select(@modifier_groups, "id", "name", @applied_mod_group.modifier_group_id), {}, class: "form-control", :prompt => "Select modifier group" %>
   </div>
   <div class="field">
     <%= f.label :item_id %><br>
-    <%= f.text_field :item_id %>
+    <%= f.select :item_id, options_from_collection_for_select(@items, "id", "name", @applied_mod_group.item_id), {}, class: "form-control", :prompt => "Select item" %>
   </div>
   <div class="actions">
     <%= f.submit %>

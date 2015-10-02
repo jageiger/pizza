@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :category_id %><br>
-    <%= f.text_field :category_id %>
+    <%= f.select :category_id, options_from_collection_for_select(@categories, "id", "name", @categorization.category_id), {}, class: "form-control", :prompt => "Select category" %>
   </div>
   <div class="field">
     <%= f.label :item_id %><br>
-    <%= f.text_field :item_id %>
+        <%= f.select :item_id, options_from_collection_for_select(@items, "id", "name", @categorization.item_id), {}, class: "form-control", :prompt => "Select item" %>
   </div>
   <div class="actions">
     <%= f.submit %>
