@@ -6,5 +6,10 @@ class PagesController < ApplicationController
   end
 
   def landing
+    unless user_signed_in?
+      flash[:notice] = 'Please login'
+      redirect_to new_user_session_path
+    end
   end
+  
 end
